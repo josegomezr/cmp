@@ -13,9 +13,9 @@
     "clean-html": "rm -f dist/*.html",
     "clean-css": "rm -f dist/*.css",
     "clean-js": "rm -f dist/*.js",
-
+    "serve": "http-server dist/",
     "clean": "(start npm run clean-html && start npm run clean-css && start npm run clean-js) || (npm run clean-html & npm run clean-css & npm run clean-js)",
-    "dev": "(start npm run watch-html && start npm run watch-css) || (npm run watch-html & npm run watch-css)",
+    "dev": "(start npm run watch-html && start npm run watch-css && start npm run serve) || (npm run watch-html & npm run watch-css & npm run serve)",
     "build": "(start npm run clean && start npm run build-css && start npm run build-js && start npm run build-html) || (npm run clean & npm run build-html & npm run build-css & npm run build-js)"
   },
   "author": "José Gómez <1josegomezr@gmail.com>",
@@ -23,6 +23,7 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "holderjs": "^2.9.4",
+    "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
   },
