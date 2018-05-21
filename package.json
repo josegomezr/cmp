@@ -1,0 +1,25 @@
+{
+  "name": "cmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --output-style compressed sass/main.scss > dist/style.css",
+    "build-js": "browserify -p tinyify js/main.js > dist/scripts.js",
+    "watch": "node-sass --watch --recursive --output dist --source-map true --source-map-contents sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "node-sass": "^4.9.0",
+    "surge": "^0.20.1",
+    "tinyify": "^2.4.1"
+  }
+}
