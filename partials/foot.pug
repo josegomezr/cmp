@@ -20,8 +20,4 @@ section#footer
         div.pb-3
           img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x250?text=facebook-page")
 section#footer-note
-  if env.PROD
-    script(src="scripts.js")
-  else
-    script(src="node_modules/jquery/dist/jquery.min.js")
-    script(src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
+  script(src="scripts.js")
