@@ -1,0 +1,87 @@
+doctype html
+html
+  include ../partials/head.pug
+  body
+    include ../partials/header.pug
+
+    div.jumbotron-slider.jumbotron-fluid
+      div.container
+        div#carousel-jumbotron.carousel.slide.carousel-fit
+          div.carousel-inner
+            div.carousel-item.active
+              div.row.clearfix
+                div.col-sm-7
+                  h1.cmp-highlight-title 
+                    span primera Tenemos lo mejor
+                    br
+                    span.text-muted para tu 
+                    span.text-warning VEHICULO
+
+                  a.btn.btn-cmp-blue.font-weight-bold(href="#") VER PRODUCTOS
+                div.col.bg-white.py-1.pl-4
+                  
+                  div.featured-brand
+                    h3
+                      img.align-middle(src=placehold_url+'/32x32')
+                      span Marca
+                    ul.list-group.list-group-fit.d-none.d-sm-block
+                      li.list-group-item Dapibus ac facilisis in
+                      li.list-group-item Morbi leo risus
+                      li.list-group-item Porta ac consectetur ac
+                      li.list-group-item Vestibulum at eros
+
+                  div.featured-brand
+                    h3
+                      img.align-middle(src=placehold_url+'/32x32')
+                      span Marca
+                    ul.list-group.list-group-fit.d-none.d-sm-block
+                      li.list-group-item Dapibus ac facilisis in
+                      li.list-group-item Morbi leo risus
+                      li.list-group-item Porta ac consectetur ac
+                      li.list-group-item Vestibulum at eros
+
+                  div.featured-brand
+                    img.img-fluid(src=placehold_url+'/400x100')
+                    p.text-center Texto promocional
+
+            div.carousel-item
+              div.row.clearfix
+                div.col-sm-7
+                  h1.cmp-highlight-title 
+                    span segunda Tenemos lo mejor
+                    br
+                    span.text-muted para tu 
+                    span.text-warning VEHICULO
+
+                  a.btn.btn-cmp-blue.font-weight-bold(href="#") VER PRODUCTOS
+                div.col.bg-white.py-1.pl-4
+                  div.featured-brand
+                    img.img-fluid(src=placehold_url+'/400x100')
+                    p.text-center Texto promocional
+                  div.featured-brand
+                    img.img-fluid(src=placehold_url+'/400x100')
+                    p.text-center Texto promocional
+    div.text-center.mb-3
+      h1.cmp-bordered-header Lo más vendido
+
+    div.container
+      div#carousel-vendidos.carousel.slide.carousel-fit
+        div.carousel-inner
+          div.carousel-item.active
+            div.row.no-gutters.clearfix
+              each val in [1, 2, 3, 4, 5]
+                div.col-sm-2.col-xs-6
+                  div.item-vendido.p-1
+                    div.mb-2
+                      img.img-fluid.d-block.mx-auto(src=placehold_url+"/120x120")
+
+                    a.btn.btn-sm.btn-fill.btn-cmp-blue.text-truncate.rounded.mb-2(href="#") Pastillas de Freno
+                    h4
+                      img.align-middle(src=placehold_url+"/32x32")
+                      span Marca
+        a.carousel-control-prev(href="#carousel-vendidos", data-slide="prev")
+          span.carousel-control-prev-icon
+        a.carousel-control-next(href="#carousel-vendidos", data-slide="next")
+          span.carousel-control-next-icon
+
+    include ../partials/foot.pug

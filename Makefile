@@ -26,14 +26,7 @@ js: clean_js
 	npm run build-js
 
 html: clean_html
-	for view in $(HTML); do \
-		PROD=1 php $$view > "dist/$$view.html"\
-        ; \
-        rename 's/.php.html/.html/g' dist/*.html; \
-        rename 's/.php.html/.html/g' dist/*.html; \
-    done; \
-    sed -i 's#placeholder.php#https://placehold.it#g' dist/*.html; \
-    sed -i 's#dist/##g' dist/*.html; \
+	npm run build-html; \
     cp -r img/ dist/
 
 .PHONY: css js html

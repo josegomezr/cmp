@@ -1,0 +1,27 @@
+hr.footer-divider.my-1
+
+section#footer
+  div.container
+    div.row
+      div.col-12.col-sm-4
+        div.pt-3.pb-4
+          img.img-fluid.d-block.mx-auto(src="img/logo-oscuro.png")
+      div.col-12.col-sm-4
+        div
+          h3.footer-title CONTACTO
+          ul.list-unstyled
+            li X Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            li X Lorem ipsum dolor sit amet
+            li X +51 999 999999
+            li X mail@mail.er
+            li X @SocialMedia
+            li X @SocialMedia
+      div.col-12.col-sm-4
+        div.pb-3
+          img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x250?text=facebook-page")
+section#footer-note
+  if env.PROD
+    script(src="scripts.js")
+  else
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")

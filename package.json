@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --output-style compressed sass/main.scss > dist/style.css",
+    "build-html": "cross-env PROD=1 pug -O js/pug-env.js views/ --out dist/",
     "build-js": "browserify -p tinyify js/main.js > dist/scripts.js",
     "watch": "node-sass --watch --recursive --output dist --source-map true --source-map-contents sass"
   },
@@ -13,8 +14,12 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "cross-env": "^5.1.5",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "nunjucks": "^3.1.3",
+    "popper.js": "^1.14.3",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
     "browserify": "^16.2.2",
