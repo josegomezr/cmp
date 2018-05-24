@@ -1,0 +1,35 @@
+doctype html
+html
+  include ../partials/head.pug
+  body
+    include ../partials/header.pug
+    p &nbsp;
+
+    div.text-center.mb-3
+      h1.cmp-bordered-header Productos
+    
+    div.container
+      div.row.clearfix
+        div.col-12.col-sm-4.col-md-3
+          h3.header-cmp.header-underlined Categoría
+          ul.list-cmp
+            li Balatas de Freno
+            li Bolsa de Suspensión
+            li Disco de Tambor
+            li Muelles Multihojas
+            li Líquido de Frenos
+            li Pastillas de Frenos
+        div.col-12.col-sm-8.col-md-9
+          h3.header-underlined Bolsas de Suspensión
+          div.row.clearfix
+            each val in [1, 2, 3, 4, 5, 6, 7, 8]
+              div.col-6.col-sm-4.col-md-3.text-center
+                img(src="holder.js/200x200?text=img").img-fluid
+                strong Bolsa Suspensión
+                div
+                  small.text-muted Descripción
+                p
+                  a.btn.btn-sm.btn-cmp-blue.text-truncate.rounded.mb-2(href="#") Ver más 
+
+    include ../partials/slider-vendidos.pug
+    include ../partials/foot.pug

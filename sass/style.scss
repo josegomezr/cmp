@@ -207,6 +207,15 @@ section#header{
 
 }
 
+.header-cmp{
+  color: $primary-blue;
+  
+}
+
+.header-underlined{
+  border-bottom: 2px solid $gray-300;
+}
+
 .cmp-bordered-header{
   border-top: 2px solid $primary-blue;
   color: $primary-blue;
