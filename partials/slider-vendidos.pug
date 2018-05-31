@@ -4,19 +4,20 @@ div.text-center.mb-3
 div.container
   div#carousel-vendidos.carousel.slide.carousel-fit
     div.carousel-inner
-      div.carousel-item.active
-        div.row.no-gutters.clearfix
-          each val in [1, 2, 3, 4, 5, 6]
-            div.col-sm-2.col-xs-6
-              div.item-vendido.p-1
-                div.mb-2
-                  img.img-fluid.d-block.mx-auto(src=placehold_url+"/120x120")
+      each slide in [1, 2, 3]
+        - var cname = slide==1 ? 'active' : ''
+        div.carousel-item(class=cname)
+          div.row.no-gutters.clearfix
+            each val in [1, 2, 3, 4, 5, 6]
+              div.col-sm-2.col-xs-6
+                div.item-vendido.p-1
+                  div.mb-2
+                    img.img-fluid.d-block.mx-auto(src=placehold_url+"/120x120")
 
-                a.btn.btn-sm.btn-fill.btn-cmp-blue.text-truncate.rounded.mb-2(href="#") Pastillas de Freno
-                h4
-                  img.align-middle(src=placehold_url+"/32x32")
-                  span Marca
-    a.carousel-control-prev(href="#carousel-vendidos", data-slide="prev")
-      span.carousel-control-prev-icon
-    a.carousel-control-next(href="#carousel-vendidos", data-slide="next")
-      span.carousel-control-next-icon
+                  a.btn.btn-sm.btn-fill.btn-cmp-blue.text-truncate.rounded.mb-2(href="#") Pastillas de Freno
+                  div
+                    img.img-fluid(src=placehold_url+'/240x32')
+      a.carousel-control-prev(href="#carousel-vendidos", data-slide="prev")
+        span.carousel-control-prev-icon
+      a.carousel-control-next(href="#carousel-vendidos", data-slide="next")
+        span.carousel-control-next-icon

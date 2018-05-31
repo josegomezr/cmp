@@ -8,7 +8,7 @@
 .navbar-cmp-dark {
   @extend .navbar-dark;
   font-size: 90%;
-
+  height: 2.4375rem;
   .navbar-nav {
     .nav-link {
       padding-top: 0;
@@ -214,6 +214,7 @@ section#header{
   background-color: $body-bg;
   background: url('../img/slider-background.png') 0 0 repeat;
   @include border-radius(0);
+  height: 500px;
 
   @include media-breakpoint-up(sm) {
     padding: 0;
@@ -299,9 +300,42 @@ hr.footer-divider{
     text-indent: 0.75rem;
   }
 }
+
 #footer-note{
+  color: white;
   background: $footer-bg-secondary;
   height: 40px;
+  padding-top: 10px;
   width: 100%;
 }
 
+.purchase-link{
+  background: #ffc107;
+  font-size: 110%;
+  padding-top: 1em;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.height-hack{
+  height: 0;
+}
+
+$color-comprar: map-get($theme-colors, "warning");
+
+.btn-comprar-ahora{
+  @include button-variant($color-comprar, $color-comprar, lighten($color-comprar, 5%));
+  color: white;
+  font-weight: bold;
+  border-radius: 0 0 15px 15px;
+  height: 2.75rem;
+  position: relative;
+  top: 0.2rem;
+  text-shadow: 0px 1px 1px #00000055;
+}
+
+
+#carousel-jumbotron .carousel-item{
+  min-height: 30em;
+  background: url(?holder.js/500x500);
+}
