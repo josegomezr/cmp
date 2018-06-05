@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --output-style compressed sass/style.scss > dist/style.css",
-    "build-html": "cp -r fonts/ dist/ && cp -r img/ dist/ && pug -O js/pug-env.js views/ --out dist/",
+    "build-html": "cp -r img/ dist/ && pug -O js/pug-env.js views/ --out dist/",
     "build-js": "browserify -p tinyify -e js/main.js -o dist/scripts.js",
     "watch-css": "node-sass --watch --recursive --output dist/ --source-map true --source-map-contents sass/style.scss",
-    "watch-html": "cp -r fonts/ dist/ && cp -r img/ dist/ && pug -O js/pug-env.js --watch views/ --out dist/",
+    "watch-html": "cp -r img/ dist/ && pug -O js/pug-env.js --watch views/ --out dist/",
     "clean-html": "rm -f dist/*.html",
     "clean-css": "rm -f dist/*.css",
     "clean-js": "rm -f dist/*.js",
