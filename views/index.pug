@@ -6,31 +6,43 @@ html
 
     div.jumbotron-slider.jumbotron-fluid
       div.container
-        .row.clearfix
-          .col-12.col-sm-7
-            div#carousel-jumbotron.carousel.slide.carousel-fit.carousel-fade
+        .row.clearfix.no-gutters
+          .col-12.col-sm-7.col-md-8.col-lg-9
+            div#carousel-jumbotron.carousel.slide.carousel-fade(data-interval="7000")
               div.carousel-inner
-                div.carousel-item.active.holderjs
-                  h1.cmp-highlight-title 
-                    span primera Tenemos lo mejor
+                div.carousel-item.active
+                  .text-right
+                   img.img-carousel(src="img/auto.png")
+                  .carousel-floating-content
+                    h1.cmp-highlight-title 
+                      span Tenemos lo mejor
+                      br
+                      span.text-muted para tu 
+                      span.text-warning VEHICULO
                     br
-                    span.text-muted para tu 
-                    span.text-warning VEHICULO
-                  a.btn.btn-cmp-blue.font-weight-bold(href="#") VER PRODUCTOS
-                div.carousel-item.holderjs
+                    a.btn.btn-cmp-blue.btn-more-rounded.font-weight-bold(href="#") VER PRODUCTOS
+                div.carousel-item
                   h1.cmp-highlight-title 
                     span lolololol
                     br
                     span.text-muted para tu 
                     span.text-warning YYYYY
                   a.btn.btn-cmp-blue.font-weight-bold(href="#") VER XXXXXX
+                div.carousel-item
+                  h1.cmp-highlight-title 
+                    span XXXXXXXx
+                    br
+                    span.text-muted para tu 
+                    span.text-warning YYYYY
+                  a.btn.btn-cmp-blue.font-weight-bold(href="#") VER ZZZZZZZ
+            //  
               a.carousel-control-prev(href="#carousel-jumbotron", data-slide="prev")
                 span.carousel-control-prev-icon
               a.carousel-control-next(href="#carousel-jumbotron", data-slide="next")
                 span.carousel-control-next-icon
-          .col-12.col-sm-5.col.bg-white.py-1.pl-4
+          .col-12.col-sm-5.col-md-4.col-lg-3.col.bg-white.py-1.pl-4.font-open-sans
             div.featured-brand
-              img.img-fluid(src=placehold_url+'/400x48')
+              img.img-fluid(src='img/fiamaster-mini.png')
               ul.list-group.list-group-fit.d-none.d-sm-block
                 li.list-group-item Dapibus ac facilisis in
                 li.list-group-item Morbi leo risus
@@ -38,7 +50,7 @@ html
                 li.list-group-item Vestibulum at eros
 
             div.featured-brand
-              img.img-fluid(src=placehold_url+'/400x48')
+              img.img-fluid(src='img/infrima-mini.png')
               ul.list-group.list-group-fit.d-none.d-sm-block
                 li.list-group-item Dapibus ac facilisis in
                 li.list-group-item Morbi leo risus
@@ -46,27 +58,9 @@ html
                 li.list-group-item Vestibulum at eros
 
             div.featured-brand
-              img.img-fluid(src=placehold_url+'/400x100')
+              img.img-fluid(src='img/logo-autoquip.png')
               p.text-center Texto promocional
 
-            div.carousel-item
-              div.row.clearfix
-                div.col-sm-7
-                  h1.cmp-highlight-title 
-                    span segunda Tenemos lo mejor
-                    br
-                    span.text-muted para tu 
-                    span.text-warning VEHICULO
-
-                  a.btn.btn-cmp-blue.font-weight-bold(href="#") VER PRODUCTOS
-                div.col.bg-white.py-1.pl-4
-                  div.featured-brand
-                    img.img-fluid(src=placehold_url+'/400x100')
-                    p.text-center Texto promocional
-                  div.featured-brand
-                    img.img-fluid(src=placehold_url+'/400x100')
-                    p.text-center Texto promocional
-    
     include ../partials/slider-vendidos.pug
 
     include ../partials/foot.pug

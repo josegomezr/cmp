@@ -74,8 +74,19 @@
 
 $top-gutter: .4rem;
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
 body{
   padding-top: $top-gutter;
+  font-family: "Oswald", "Open Sans", Helvetica, sans;
+}
+
+.font-open-sans{
+  font-family: "Open Sans";
+}
+.font-oswald{
+  font-family: "Oswald";
 }
 
 .bg-cmp-nav{
@@ -172,9 +183,6 @@ $badge-angle-width-sm: $badge-height-sm*0.270833;
 
 
 @include media-breakpoint-down('md') {
-  .badge-cmp{
-    
-  }
 
   .navbar-cmp{
     .navbar-collapse{
@@ -211,10 +219,9 @@ section#header{
 .jumbotron-slider {
   padding: 0;
   margin-bottom: $jumbotron-padding;
-  background-color: $body-bg;
-  background: url('../img/slider-background.png') 0 0 repeat;
+  background: $body-bg url('img/fondo.jpg') repeat 0 -90px;
   @include border-radius(0);
-  height: 500px;
+  min-height: 480px;
 
   @include media-breakpoint-up(sm) {
     padding: 0;
@@ -337,5 +344,28 @@ $color-comprar: map-get($theme-colors, "warning");
 
 #carousel-jumbotron .carousel-item{
   min-height: 30em;
-  background: url(?holder.js/500x500);
+  // position: relative;
+}
+
+.img-carousel{
+  height: 480px;
+}
+
+.carousel-floating-content{
+  position: absolute;
+  top: 0;
+}
+
+.btn.btn-more-rounded{
+  border-radius: 10px;
+}
+
+.icon-footer{
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
