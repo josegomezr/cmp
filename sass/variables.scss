@@ -6,8 +6,8 @@ $bg-main-nav: $primary-blue;
 $bg-main-nav-gradient-start: $bg-main-nav;
 $bg-main-nav-gradient-end: #17386e;
 
-$navbar-cmp-color:                rgba($body-bg, .5);
-$navbar-cmp-hover-color:          rgba($body-bg, .7);
+$navbar-cmp-color:                rgba($body-bg, .95);
+$navbar-cmp-hover-color:          rgba($body-bg, .5);
 $navbar-cmp-active-color:         rgba($body-bg, .9);
 $navbar-cmp-disabled-color:       rgba($body-bg, .3);
 $navbar-cmp-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-cmp-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;

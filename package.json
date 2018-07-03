@@ -17,7 +17,7 @@
     "clean": "npm run clean-html && npm run clean-css && npm run clean-js",
     "dev": "npm run watch-html & npm run watch-css & npm run serve",
     "build": "npm run clean && (npm run build-html & npm run build-css & npm run build-js)",
-    "deploy":"npm run build && npm run upload",
+    "deploy": "npm run build && npm run upload",
     "upload": "surge dist/ cmp.surge.sh"
   },
   "author": "José Gómez <1josegomezr@gmail.com>",

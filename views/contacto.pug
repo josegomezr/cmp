@@ -1,0 +1,58 @@
+doctype html
+html
+  include ../partials/head.pug
+  body
+    include ../partials/header.pug
+    p &nbsp;
+
+    div.text-center.mb-4
+      h1.cmp-bordered-header.font-weight-bold Contacto
+    
+    .container
+        .row.clearfix
+            .col-12.bg-cmp-dark.py-2
+                .row.clearfix
+                    .col-12.col-sm-6.col-lg-3.color-white.font-open-sans.my-auto.d-flex.align-items-center
+                        img(src="img/iconos/iconos vector-05.png").contacto-icon
+                        p.word-break-all.m-0 lorem ipsum dolor sit 101<br>
+                            | lorem ipsum dolor Perú
+                    .col-12.col-sm-6.col-lg-3.color-white.font-open-sans.my-auto.d-flex.align-items-center
+                        img(src="img/iconos/iconos vector-02.png").contacto-icon
+                        p.word-break-all.m-0 (511) 332 0490<br>
+                            | (511) 332 0490
+                    .col-12.col-sm-6.col-lg-3.color-white.font-open-sans.my-auto.d-flex.align-items-center
+                        img(src="img/iconos/iconos vector-04.png").contacto-icon
+                        p.word-break-all.m-0 ventas@grupomasterperu.com
+                    .col-12.col-sm-6.col-lg-3.color-white.font-open-sans.my-auto.d-flex.align-items-center
+                        img(src="img/iconos/iconos vector-07.png").contacto-icon
+                        p.word-break-all.m-0 Lunes a Viernes<br>
+                            | 9:00 a 18:00hs
+    
+        .row.clearfix
+            .col-12.my-4.col-sm-6
+                h2.bottom-bordered Escríbenos
+                form
+                    .form-group
+                        // label.control-label(for="nombre") Nombre
+                        input#nombre.form-control(type="text", placeholder="Nombre")
+                    .form-group
+                        // label.control-label(for="email") Email
+                        input#email.form-control(type="text", placeholder="Email")
+                    .form-group
+                        // label.control-label(for="telefono") Teléfono
+                        input#telefono.form-control(type="text", placeholder="Teléfono")
+                    .form-group
+                        // label.control-label(for="asunto") Asunto
+                        input#asunto.form-control(type="text", placeholder="Asunto")
+                    .form-group
+                        // label.control-label(for="mensaje") Mensaje
+                        textarea#mensaje.form-control(type="text", placeholder="Mensaje")
+                    .form-group.text-right
+                        button.btn.btn-primary-dark Enviar
+                    
+                    
+            .col-12.my-4.col-sm-6
+                h2.bottom-bordered Ubicación
+                img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x250?text=facebook-page")
+
+    include ../partials/foot.pug

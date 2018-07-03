@@ -1,0 +1,45 @@
+doctype html
+html
+  include ../partials/head.pug
+  body
+    include ../partials/header.pug
+    p &nbsp;
+
+    div.text-center.mb-4
+      h1.cmp-bordered-header.font-weight-bold Novedades
+    
+    .container
+        .row.clearfix
+            .col-12.col-md-9.font-open-sans
+                each slide in [1, 2, 3, 4]
+                    article
+                        .media
+                            img.mr-3(src=placehold_url+"/250x250?text=facebook-page")
+                            .media-body
+                                h2.bottom-bordered Título noticia 
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quo sit iure omnis. Ipsum, exercitationem minus? Repellat itaque placeat praesentium facere numquam. Eos doloremque praesentium unde quam, perspiciatis eaque sed!
+                                .text-right
+                                    a.btn.btn-primary-dark.rounded-button(href="#") Ver más
+                                .post-metadata.text-right
+                                    a(href="#").px-2
+                                        i.fas.fa-star.mr-1
+                                        | Novedades
+                                    a(href="#").px-2
+                                        i.fas.fa-calendar.mr-1
+                                        | 14 Junio 2018
+                        hr.post-separator
+            .col-12.col-md-3
+                .mb-3
+                    h2.bottom-bordered Escríbenos
+                    ul.list-square
+                        li NOVEDADES
+                        li CONSEJOS
+                        li PROMOCIONES
+                        li BOLETINES
+                .mb-3
+                    img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x300?text=ad")
+                .mb-3
+                    img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x300?text=ad")
+                .mb-3
+
+    include ../partials/foot.pug

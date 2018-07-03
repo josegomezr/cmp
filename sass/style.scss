@@ -18,6 +18,7 @@
 }
 
 .navbar-cmp {
+  border-bottom: 4px solid lighten($footer-bg-primary, 10%);
   .navbar-brand {
     color: $navbar-cmp-active-color;
 
@@ -80,13 +81,16 @@ $top-gutter: .4rem;
 body{
   padding-top: $top-gutter;
   font-family: "Oswald", "Open Sans", Helvetica, sans;
+  letter-spacing: 0.025rem;
 }
 
 .font-open-sans{
   font-family: "Open Sans";
+  letter-spacing: normal;
 }
 .font-oswald{
   font-family: "Oswald";
+  letter-spacing: 0.025rem;
 }
 
 .bg-cmp-nav{
@@ -253,7 +257,6 @@ section#header{
   color: $primary-blue;
   display: inline;
   border-bottom: 2px solid $primary-blue;
-  margin-bottom: .75rem;
 }
 
 .btn-fill{
@@ -330,6 +333,10 @@ hr.footer-divider{
 
 $color-comprar: map-get($theme-colors, "warning");
 
+.btn-primary-dark{
+  @include button-variant($footer-bg-secondary, $footer-bg-secondary, lighten($footer-bg-secondary, 5%));
+}
+
 .btn-comprar-ahora{
   @include button-variant($color-comprar, $color-comprar, lighten($color-comprar, 5%));
   color: white;
@@ -339,6 +346,9 @@ $color-comprar: map-get($theme-colors, "warning");
   position: relative;
   top: 0.2rem;
   text-shadow: 0px 1px 1px #00000055;
+  &:hover{
+    color: white;
+  }
 }
 
 
@@ -368,4 +378,63 @@ $color-comprar: map-get($theme-colors, "warning");
 
 .capitalize{
   text-transform: capitalize;
+}
+
+.contacto-icon{
+  height: 64px;
+  width: 56px;
+  padding: 8px;
+  padding-left: 0;
+  float: left;
+}
+.color-white{
+  color: white;
+}
+
+.segmented-children .segmented-child{
+  border-right: 1px solid #4f5f6c;
+  &:last-child{
+    border-right: none;
+  }
+}
+
+.bg-cmp-dark{
+  background-color: #293138;
+}
+
+.bottom-bordered{
+  color: #1e478b;
+  border-bottom: 1px solid #1e478b;
+}
+
+.word-break-all{
+  word-break: break-all;
+}
+
+.rounded-button{
+  @include border-radius(20px);
+}
+
+.post-separator{
+  border-top-width: 10px;
+  border-top-color: #1e478b;
+}
+
+.post-metadata{
+  a{
+    color: gray;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  i[class*='fa-']{
+    color: #1e478b;
+  }
+} 
+
+.list-square{
+  list-style-image: url("data:image/svg+xml,<svg viewBox='0 0 48 48' height='16' stroke='0' width='16' xmlns='http://www.w3.org/2000/svg'><rect x='12' y='12' width='24' height='24' style='fill:#1e478b;stroke-width:0;' /></svg>");
+}
+.header-colored{
+  color: #1e478b;
 }
