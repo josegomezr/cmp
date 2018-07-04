@@ -14,9 +14,10 @@ html
                 each slide in [1, 2, 3, 4]
                     article
                         .media
-                            img.mr-3(src=placehold_url+"/250x250?text=facebook-page")
+                            img.mr-3(src="img/noticia-pic.png")
                             .media-body
-                                h2.bottom-bordered Título noticia 
+                                h2.bottom-bordered 
+                                    a(href="noticia.html") Título noticia 
                                 p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quo sit iure omnis. Ipsum, exercitationem minus? Repellat itaque placeat praesentium facere numquam. Eos doloremque praesentium unde quam, perspiciatis eaque sed!
                                 .text-right
                                     a.btn.btn-primary-dark.rounded-button(href="#") Ver más
@@ -37,9 +38,8 @@ html
                         li PROMOCIONES
                         li BOLETINES
                 .mb-3
-                    img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x300?text=ad")
+                    img.img-fluid.d-block.mx-auto(src="img/banner-1.png")
                 .mb-3
-                    img.img-fluid.d-block.mx-auto(src=placehold_url+"/300x300?text=ad")
-                .mb-3
+                    img.img-fluid.d-block.mx-auto(src="img/banner-2.png")
 
     include ../partials/foot.pug

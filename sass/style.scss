@@ -405,6 +405,13 @@ $color-comprar: map-get($theme-colors, "warning");
 .bottom-bordered{
   color: #1e478b;
   border-bottom: 1px solid #1e478b;
+  a{
+    color: #1e478b;
+    &:hover{
+      text-decoration: none;
+      color:inherit;
+    }
+  }
 }
 
 .word-break-all{
@@ -438,3 +445,4 @@ $color-comprar: map-get($theme-colors, "warning");
 .header-colored{
   color: #1e478b;
 }
+
